@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "ウェブサイトリニューアルのお知らせ"
+title: "Greetings from Future Spirits Malaysia!"
 date: 2017-10-18 00:00:00 +0000
 categories: notice
 ---
-平素より格別のお引き立てを賜り、誠にありがとうございます。<br>
-2017年4月24日（月）にオリックス銀行のウェブサイトをリニューアルしましたので、お知らせします。<br>
-お客さまにとって使いやすくてわかりやすいウェブサイトを目指し、デザインを刷新しました。
+We are pleased to inform you that we have renewed our homepage on 16th November 2017 
+to provide our customers with a more user-friendly browsing exprience. <br><br>
+ 
+We would like to thank you for your continuous support and feel free to contact us  
+if you have any queries.
