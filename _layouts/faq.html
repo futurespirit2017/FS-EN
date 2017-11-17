@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body class="news">
+<div id="wrapper">
+    <span class="menu-btn overlay"></span>
+    {% include header.html %}
+    <section id="section-breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="{{ site.baseurl }}"> <span>HOME</span></a></li>
+                <li>{{ page.title }}</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 maincontent">
+                    {{ content }}
+                </div>
+                <div class="col-md-3 sidebar">
+                    <div class="widget widget-menu">
+                        <h3 class="widget-title">Support</h3>
+                        <div class="widget-content">
+                            <ul class="menu">
+                                {% assign amount = 0 %}
+                                {% assign sorted_pages = (site.pages | sort: 'priority') %}
+                                {% for front_page in sorted_pages %}
+                                {% if front_page.categories == 'faq' and front_page.tag != 'faq_cate_detail'%}
+                                <li {% if front_page.categories == 'faq' %} class="active" {% endif %}>
+                                    <a href="{{ front_page.url }}">{{ front_page.title }} </a>
+                                    {% if front_page.tag == 'faq_cate' %}
+                                    <ul>
+                                        <li><a href="/faq/server.html">About Rental Servers</a></li>
+                                        <li><a href="/faq/domain-ssl.html">About Domain, SSL Certificates</a></li>
+                                        <li><a href="/faq/other-services.html">About other services</a></li>
+                                        <li><a href="/faq/support.html">About support・transactions</a></li>
+                                        <li><a href="/faq/about-us.html">About us</a></li>
+                                        <li><a href="/faq/other.html">Others</a></li>
+                                    </ul>
+                                    {% endif %}
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include footer.html %}
+</div>
+{% include sidebar_menu.html %}
+
+{% include script.html %}
+</body>
+</html>
